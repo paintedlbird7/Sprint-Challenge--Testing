@@ -18,8 +18,9 @@ let emptyArray = [];
 
 
 server.get('/', async (req, res) => {
-  res.status(200).json({ api: 'up' });
+  res.status(200).json({ api: 'games' });
 });
+
 
 
 server.get('/games', async (req, res) => {
