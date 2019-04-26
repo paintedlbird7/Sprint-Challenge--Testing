@@ -17,8 +17,6 @@ describe('GET /games', () => {
     })
     })
 
-   
-
     it('should return JSON', async () => {
         const res = await request(server).get('/')
         expect(res.type).toBe('application/json')
@@ -40,7 +38,7 @@ describe('POST /games', () => {
       const response = await request(server)
         .post('/games')
         .send({ 
-            title: 'Pacman', 
+            title: 'Pacman2', 
             genre: 'Arcade', 
         });
       expect(response.body).toEqual.toBeDefined;
