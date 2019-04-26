@@ -8,8 +8,8 @@ let db = [
   
   {
     id: 1,
-    title: 'Pokemon',
-    genre: 'kids',
+    title: 'Pacman',
+    genre: 'Arcade',
   },
 
 ];
