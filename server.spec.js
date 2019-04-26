@@ -24,10 +24,10 @@ describe('GET /games', () => {
         expect(res.type).toBe('application/json')
     })
 
-    //  it('should return 200 OK using async/await', async () => {
-    //     const res = await request(server).get('/')
-    //     expect(res.status).toBe(200)
-    // })
+     it('should return 200 OK using async/await', async () => {
+        const res = await request(server).get('/')
+        expect(res.status).toBe(200)
+    })
 
     // it('should return { api: games}', async () => {
     //     const res = await request(server).get('/')
@@ -39,10 +39,21 @@ describe('POST /games', () => {
     it('should have title and genre', async () => {
       const response = await request(server)
         .post('/games')
-        .send({ title: 'Pacman', genre: 'Arcade', });
+        .send({ 
+            title: 'Pacman', 
+            genre: 'Arcade', 
+        });
       expect(response.body).toEqual.toBeDefined;
     //   {( post: 'Pacman' )};
-    })
-    
+    })  
 
+    it('should return 200 OK using async/await', async () => {
+        const res = await request(server).get('/')
+        expect(res.status).toBe(200)
+    })
+
+    it('should return { api: up}', async () => {
+        const res = await request(server).get('/')
+        expect(res.body).toEqual({ api: 'games'})
+    })
 })

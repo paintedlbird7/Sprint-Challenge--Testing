@@ -7,7 +7,6 @@ server.use(express.json());
 let db = [
   
   {
-    id: 1,
     title: 'Pacman',
     genre: 'Arcade',
   },
